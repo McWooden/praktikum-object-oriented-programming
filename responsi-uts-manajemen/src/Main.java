@@ -24,7 +24,7 @@ public class Main {
 
         System.out.println();
 
-        Pegawai pegawai2 = new PegawaiKontrak("Andi", 3000000, 12);
+        Pegawai pegawai2 = new PegawaiKontrak("Conan", 3000000, 12);
         pegawai2.tampilkanInfo();
     }
 }

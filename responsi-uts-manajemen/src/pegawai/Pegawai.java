@@ -9,9 +9,7 @@ public class Pegawai {
         this.gaji = gaji;
     }
 
-    public String getNamaPegawai() {
-        return namaPegawai;
-    }
+    public String getNamaPegawai() { return namaPegawai; }
 
     public void setNamaPegawai(String namaPegawai) {
         this.namaPegawai = namaPegawai;
