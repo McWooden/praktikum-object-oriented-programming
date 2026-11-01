@@ -8,6 +8,11 @@ public class Elektronik extends Produk {
         this.garansi = garansi;
     }
 
+    // Overload Constructor: membuat produk elektronik tanpa menentukan garansi (default 0 tahun)
+    public Elektronik(String namaProduk, double harga) {
+        this(namaProduk, harga, 0);
+    }
+
     public int getGaransi() {
         return garansi;
     }
@@ -21,4 +26,11 @@ public class Elektronik extends Produk {
         super.tampilkanInfo();
         System.out.println("Garansi: " + garansi + " tahun");
     }
+
+    // Overload Method: menampilkan info dengan catatan/keterangan tambahan
+    public void tampilkanInfo(String catatan) {
+        tampilkanInfo();
+        System.out.println("Catatan: " + catatan);
+    }
 }
+

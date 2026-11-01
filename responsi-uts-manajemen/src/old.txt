@@ -1,0 +1,4 @@
+//        System.out.println(((Elektronik) produk1).getGaransi());
+//        produk1.setNamaProduk("AtrlasOS");
+//        produk1.tampilkanInfo("anjay"); // harus ganti Produk jadi Elektronik, tapi nanti namanya bukan polymorphism lagi
+//        ((Elektronik) produk1).tampilkanInfo("anjay"); // ini lebih baik sih
