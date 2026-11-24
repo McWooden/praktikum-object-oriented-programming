@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Proposal Proyek ISL 2026 - Information Super League</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    line-height: 1.75;
+    color: #242424;
+    max-width: 820px;
+    margin: 48px auto;
+    padding: 0 24px;
+    background-color: #ffffff;
+    font-size: 11pt;
+  }
+  h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+  h2 {
+    font-size: 14pt;
+    font-weight: 500;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 32px;
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 14pt;
+    font-weight: 700;
+    color: #111111;
+    margin-top: 36px;
+    margin-bottom: 12px;
+  }
+  h4 {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #111111;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+  p {
+    margin: 12px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 10pt;
+    background: transparent;
+  }
+  th, td {
+    border: 1px solid #777777;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+    background: transparent;
+    color: #111111;
+  }
+  th {
+    font-weight: 700;
+    color: #111111;
+    background: transparent;
+  }
+  blockquote {
+    border-left: 3px solid #242424;
+    margin: 18px 0;
+    padding: 8px 16px;
+    font-style: italic;
+    color: #333333;
+    background: transparent;
+  }
+  ul, ol {
+    margin: 10px 0;
+    padding-left: 22px;
+  }
+  li {
+    margin-bottom: 4px;
+  }
+  code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 9.5pt;
+    background: #f7f7f7;
+    padding: 2px 4px;
+    border-radius: 2px;
+  }
+  pre {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 9.5pt;
+    background: #f7f7f7;
+    padding: 12px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 16px 0;
+  }
+  .center {
+    text-align: center;
+  }
+  .placeholder-box {
+    border: 2px dashed #dd6b20;
+    background-color: #fffaf0;
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 6px;
+  }
+  .badge-orange {
+    display: inline-block;
+    background-color: #dd6b20;
+    color: #ffffff;
+    font-size: 9pt;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<h1>PROPOSAL PROYEK SISTEM INFORMASI</h1>
+<h2>APLIKASI PENDAFTARAN INFORMATION SUPER LEAGUE (ISL) 2026 BERBASIS JAVA CLI</h2>
+
+<h3>IDENTITAS TIM &amp; SAMPUL PROPOSAL</h3>
+<ul>
+  <li><strong>Mata Kuliah:</strong> Praktikum Pemrograman Berorientasi Objek (PBO)</li>
+  <li><strong>Program Studi:</strong> S1 Teknologi Informasi – Universitas Tidar</li>
+  <li><strong>Tahun Akademik:</strong> 2026/2027</li>
+  <li><strong>Nama Tim:</strong> Hidup Bersama Jawa</li>
+  <li><strong>Topik Proyek:</strong> Sistem Informasi Pendaftaran Turnamen Information Super League (ISL) 2026</li>
+</ul>
+
+<h4>Susunan Anggota Tim &amp; Pembagian Peran</h4>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 6%;" class="center">No</th>
+      <th style="width: 25%;">Nama Lengkap</th>
+      <th style="width: 15%;" class="center">NIM</th>
+      <th style="width: 22%;">Peran Utama</th>
+      <th style="width: 32%;">Tanggung Jawab Utama</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="center">1</td>
+      <td><strong>Muhammad Raka Mushaddaq</strong></td>
+      <td class="center">2505060072</td>
+      <td>Project Advisor &amp; Analyst</td>
+      <td>Pencetus ide, perumusan analisis kebutuhan, dan pengarah arsitektur sistem</td>
+    </tr>
+    <tr>
+      <td class="center">2</td>
+      <td><strong>Sholahuddin Ahmad</strong></td>
+      <td class="center">2505060070</td>
+      <td>Lead Developer</td>
+      <td>Perancangan Class Diagram, pengodean Core Class PBO, dan integrasi logika sistem</td>
+    </tr>
+    <tr>
+      <td class="center">3</td>
+      <td><strong>Fachri Azizul Akbar</strong></td>
+      <td class="center">2505060077</td>
+      <td>Technical Secretary</td>
+      <td>Penyusunan dokumentasi proposal, notulensi rapat, laporan teknis, dan administrasi tim</td>
+    </tr>
+    <tr>
+      <td class="center">4</td>
+      <td><strong>Ahmad Zuhdan Sani</strong></td>
+      <td class="center">2340506069</td>
+      <td>Tester &amp; UI/UX Designer</td>
+      <td>Perancangan alur antarmuka CLI, validasi input konsol, dan pengujian keandalan sistem</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>BAB I. ANALISIS DAN RANCANGAN SISTEM</h3>
+
+<h4>1. Latar Belakang</h4>
+<p><em>Information Super League</em> (ISL) 2026 merupakan ajang kompetisi tahunan antar-rombongan belajar (rombel) di lingkungan Program Studi S1 Teknologi Informasi Universitas Tidar. Kegiatan ini mencakup beragam cabang perlombaan pada bidang olahraga fisik, <em>e-sports</em>, maupun kompetisi keahlian teknologi, yaitu: <strong>Futsal, Badminton, Mobile Legends, PlayStation (PS), Hackathon, Capture The Flag (CTF), dan Crimping Kabel</strong>. Mengingat tingginya antusiasme partisipasi mahasiswa dari berbagai angkatan serta diterapkannya dua skema biaya pendaftaran (pendaftaran cabang satuan maupun Paket <em>Bundling</em>), pengelolaan data transaksi pendaftaran secara akurat dan terpusat menjadi kebutuhan krusial bagi panitia pelaksana.</p>
+
+<p><strong>Kondisi Saat Ini dan Bukti Pendukung:</strong></p>
+<p>Berdasarkan evaluasi pelaksanaan kepanitiaan periode sebelumnya, alur pendaftaran dan verifikasi pembayaran peserta masih berjalan secara semi-manual menggunakan borang survei daring (<em>Google Form</em>) yang terpisah dari lembar kerja rekapitulasi (<em>Google Sheets</em>). Pada sistem berjalan tersebut, perwakilan rombel harus mengisi formulir berulang kali jika mendaftar di lebih dari satu cabang lomba, serta mengunggah tangkapan layar bukti transfer secara manual.</p>
+<p>Pendekatan semi-manual ini terbukti menimbulkan sejumlah kendala operasional nyata di lapangan, antara lain:</p>
+<ol>
+  <li><strong>Duplikasi Data Tim:</strong> Terjadinya pendaftaran ganda oleh perwakilan rombel yang sama pada satu cabang lomba yang sama akibat tidak adanya sistem validasi keunikan entitas secara <em>real-time</em>, sehingga mengacaukan perhitungan sisa kuota lomba.</li>
+  <li><strong>Kesalahan Kalkulasi Biaya:</strong> Perwakilan rombel maupun bendahara panitia kerap mengalami salah hitung selisih nominal pembayaran antara akumulasi lomba satuan dengan skema promo Paket <em>Bundling</em> (misal: tarif promo Rp250.000 untuk paket 3 cabang lomba).</li>
+  <li><strong>Keterlambatan Proses Verifikasi:</strong> Panitia membutuhkan waktu verifikasi yang lama karena harus mencocokkan mutasi saldo (baik via transfer DANA maupun pembayaran tunai) dengan baris data <em>spreadsheet</em> satu demi satu.</li>
+</ol>
+<p>Oleh karena itu, diperlukan sebuah aplikasi sistem informasi pendaftaran berbasis <em>Command Line Interface</em> (CLI) yang dibangun menggunakan bahasa pemrograman <strong>Java (JDK 25)</strong> dengan menerapkan paradigma <strong>Pemrograman Berorientasi Objek (PBO)</strong> secara murni guna mengotomatisasi validasi keunikan pendaftaran, kalkulasi biaya yang akurat, serta rekapitulasi data pendaftar yang terstruktur.</p>
+
+<h4>2. Identifikasi Masalah</h4>
+<p><strong>2.1 Analisis 5 Whys:</strong></p>
+<ul>
+  <li><strong>Gejala (Symptom):</strong> Proses rekapitulasi data pendaftar, perhitungan tarif lomba, dan verifikasi status pembayaran peserta ISL 2026 berjalan lambat, rawan kesalahan input ganda rombel, dan merepotkan panitia.</li>
+  <li><strong>Mengapa 1:</strong> Panitia harus memeriksa data pendaftar dan mencocokkan nominal mutasi pembayaran (DANA/Tunai) secara manual satu per satu dari formulir terpisah.</li>
+  <li><strong>Mengapa 2:</strong> Media pengumpulan data (<em>Google Form</em>) tidak memiliki logika bisnis untuk menghitung tarif pendaftaran otomatis, membatasi kuota cabang secara otomatis, maupun mencegah input ganda.</li>
+  <li><strong>Mengapa 3:</strong> Data yang masuk hanya berupa baris pasif tanpa keterikatan model objek terstruktur yang menghubungkan entitas peserta, cabang lomba, dan metode pembayaran.</li>
+  <li><strong>Mengapa 4:</strong> Belum tersedianya aplikasi perangkat lunak terpusat berbasis Java yang mengimplementasikan konsep <em>Object-Oriented Programming</em> (enkapsulasi, pewarisan, polimorfisme, dan antarmuka) untuk memproses validasi pendaftaran dan transaksi secara terintegrasi.</li>
+  <li><strong>Mengapa 5 (Akar Masalah):</strong> Panitia mengandalkan alat survei umum serbaguna tanpa merancang sistem informasi pendaftaran khusus yang sesuai dengan domain aturan bisnis turnamen ISL 2026.</li>
+</ul>
+
+<p><strong>2.2 Problem Statement:</strong></p>
+<blockquote>
+  "Masalah pengelolaan pendaftaran peserta, perhitungan biaya lomba, dan verifikasi pembayaran pada kegiatan Information Super League (ISL) 2026 saat ini masih dilakukan secara semi-manual menggunakan Google Form dan pengecekan spreadsheet. Hal ini berdampak langsung pada perwakilan rombel (kebingungan perhitungan tarif promo dan lamanya kepastian status) serta panitia pelaksana (rawan terjadi duplikasi rombel, selisih kas, dan lambatnya verifikasi mutasi). Solusi dinilai berhasil jika aplikasi sistem informasi berbasis Java CLI yang dibangun mampu memvalidasi keunikan rombel secara otomatis, mengkalkulasi tarif satuan dan paket bundling secara presisi, mengelola status verifikasi pembayaran, serta menyajikan rekapitulasi peserta per cabang lomba secara cepat dan terstruktur."
+</blockquote>
+
+<h4>3. Tujuan &amp; Manfaat</h4>
+<p><strong>3.1 Tujuan Proyek:</strong></p>
+<ol>
+  <li><strong>Bagi Perwakilan Rombel (Peserta):</strong>
+    <ul>
+      <li>Menyediakan antarmuka pendaftaran berbasis konsol yang memandu pengisian data tim secara cepat dan terpadu.</li>
+      <li>Memberikan kejelasan kalkulasi rincian biaya pendaftaran secara otomatis (baik tarif satuan maupun Paket <em>Bundling</em>).</li>
+      <li>Memberikan transparansi status verifikasi transaksi pendaftaran (<em>Menunggu Verifikasi</em>, <em>Lunas</em>, atau <em>Ditolak</em>).</li>
+    </ul>
+  </li>
+  <li><strong>Bagi Panitia Pelaksana (Admin):</strong>
+    <ul>
+      <li>Mengotomatisasi validasi pencegahan pendaftaran ganda dari rombel yang sama pada cabang lomba yang sama.</li>
+      <li>Menyediakan menu pengelolaan kuota dan tarif cabang lomba secara dinamis.</li>
+      <li>Mempercepat proses verifikasi bukti bayar (DANA/Tunai) dan menghasilkan rekapitulasi pendaftar serta rekap total keuangan secara otomatis.</li>
+    </ul>
+  </li>
+  <li><strong>Bagi Tim Pengembang (Akademik):</strong>
+    <ul>
+      <li>Mengimplementasikan konsep dasar Pemrograman Berorientasi Objek (Enkapsulasi, Abstraksi, Pewarisan, dan Polimorfisme) serta perancangan diagram UML ke dalam perangkat lunak fungsional nyata.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>3.2 Manfaat Proyek:</strong></p>
+<ul>
+  <li><strong>Manfaat Operasional:</strong> Menghilangkan redudansi data, mencegah kelebihan kuota peserta, dan meniadakan potensi kerugian selisih kas akibat kesalahan perhitungan manual.</li>
+  <li><strong>Manfaat Waktu:</strong> Memangkas durasi pendaftaran peserta dari rata-rata ~10 menit menjadi kurang dari 3 menit, serta mempercepat validasi panitia.</li>
+  <li><strong>Manfaat Akademis:</strong> Menjadi artefak rekayasa perangkat lunak berbasis PBO yang dapat dikembangkan lebih lanjut pada mata kuliah lanjutan.</li>
+</ul>
+
+<h4>4. Ruang Lingkup</h4>
+<p><strong>4.1 Fitur Dalam Cakupan (In-Scope):</strong></p>
+<ol>
+  <li><strong>Otentikasi Pengguna Multi-Role:</strong> Sistem login konsol untuk membedakan hak akses dan menu antara Panitia (Admin) dan Perwakilan Rombel.</li>
+  <li><strong>Katalog Cabang Lomba:</strong> Menampilkan daftar cabang lomba resmi (Futsal, Badminton, MLBB, PS, Hackathon, CTF, Crimping Kabel) lengkap dengan sisa kuota dan tarif.</li>
+  <li><strong>Formulir Pendaftaran Tim:</strong> Pendaftaran tim perwakilan rombel dengan validasi otomatis agar satu rombel tidak dapat mendaftar dua kali pada cabang lomba yang sama.</li>
+  <li><strong>Kalkulasi Biaya Otomatis (Polimorfisme Biaya):</strong> Perhitungan total biaya pendaftaran berdasarkan skema lomba satuan maupun skema promo Paket <em>Bundling</em> (Rp250.000).</li>
+  <li><strong>Pemilihan Kanal Pembayaran (Interface):</strong> Pemrosesan pembayaran melalui mekanisme transfer dompet digital (DANA) atau pembayaran tunai (Cash) ke panitia.</li>
+  <li><strong>Modul Verifikasi Pembayaran:</strong> Panitia dapat meninjau daftar transaksi masuk dan mengubah status pendaftaran (<em>Menunggu Verifikasi</em>, <em>Lunas</em>, <em>Ditolak</em>).</li>
+  <li><strong>Laporan &amp; Rekapitulasi Data:</strong> Menampilkan rekapitulasi daftar peserta terdaftar per cabang lomba serta total penerimaan kas pendaftaran.</li>
+</ol>
+
+<p><strong>4.2 Fitur Luar Cakupan (Out-of-Scope):</strong></p>
+<ul>
+  <li>Integrasi Payment Gateway Otomatis (tidak menggunakan Webhook API eksternal).</li>
+  <li>Antarmuka Grafis (GUI) / Web / Mobile (murni berbasis Command Line Interface).</li>
+  <li>Manajemen Bagan Turnamen (Bracket &amp; Scoring).</li>
+</ul>
+
+<p><strong>4.3 Batasan Sistem:</strong></p>
+<ul>
+  <li><strong>Bahasa &amp; Lingkungan:</strong> Java Development Kit versi 25 (JDK 25) pada konsol terminal desktop.</li>
+  <li><strong>Penyimpanan Data (In-Memory):</strong> Menggunakan Java Collections Framework (<code>ArrayList</code> dan <code>HashMap</code>) tanpa DBMS eksternal.</li>
+</ul>
+
+<h4>5. Analisis Kebutuhan</h4>
+<p><strong>5.1 Kebutuhan Fungsional (KF):</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 12%;" class="center">Kode</th>
+      <th style="width: 63%;">Kebutuhan Fungsional (Sistem Harus Mampu...)</th>
+      <th style="width: 25%;">Aktor Terkait</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="center"><strong>KF-01</strong></td>
+      <td>Menampilkan daftar seluruh cabang lomba yang tersedia beserta sisa kuota, deskripsi, dan skema tarifnya (satuan maupun Paket Bundling).</td>
+      <td>Perwakilan Rombel, Panitia</td>
+    </tr>
+    <tr>
+      <td class="center"><strong>KF-02</strong></td>
+      <td>Memfasilitasi perwakilan rombel untuk menginput identitas tim dan memilih satu atau beberapa cabang lomba yang ingin diikuti.</td>
+      <td>Perwakilan Rombel</td>
+    </tr>
+    <tr>
+      <td class="center"><strong>KF-03</strong></td>
+      <td>Memvalidasi keunikan rombel secara otomatis untuk menolak pendaftaran jika rombel tersebut sudah terdaftar pada cabang lomba yang dipilih.</td>
+      <td>Sistem</td>
+    </tr>
+    <tr>
+      <td class="center"><strong>KF-04</strong></td>
+      <td>Menghitung total tagihan pendaftaran secara otomatis berdasarkan jenis skema tarif cabang lomba yang dipilih (Lomba Satuan atau Paket Bundling).</td>
+      <td>Sistem</td>
+    </tr>
+    <tr>
+      <td class="center"><strong>KF-05</strong></td>
+      <td>Memproses pemilihan metode pembayaran (Transfer DANA atau Tunai) dan mencatat referensi/nomor transaksi pembayaran sebelum diajukan.</td>
+      <td>Perwakilan Rombel</td>
+    </tr>
+    <tr>
+      <td class="center"><strong>KF-06</strong></td>
+      <td>Menyediakan fitur bagi panitia untuk memeriksa transaksi yang masuk dan memperbarui status verifikasi pembayaran (<em>Lunas</em> / <em>Ditolak</em>).</td>
+      <td>Panitia</td>
+    </tr>
+    <tr>
+      <td class="center"><strong>KF-07</strong></td>
+      <td>Memungkinkan panitia memperbarui data master lomba (menambah kuota atau menyesuaikan tarif lomba).</td>
+      <td>Panitia</td>
+    </tr>
+    <tr>
+      <td class="center"><strong>KF-08</strong></td>
+      <td>Menampilkan rekapitulasi data tim peserta yang telah terdaftar per cabang lomba dan akumulasi pemasukan biaya pendaftaran yang berstatus lunas.</td>
+      <td>Panitia</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>5.2 Kebutuhan Non-Fungsional (KNF):</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 15%;" class="center">Kode</th>
+      <th style="width: 25%;">Kategori</th>
+      <th style="width: 60%;">Spesifikasi Terukur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="center"><strong>KNF-01</strong></td>
+      <td><em>Usability</em> (Kemudahan)</td>
+      <td>Menu konsol CLI dirancang hierarkis dan informatif dengan pesan kesalahan yang jelas, sehingga pengguna dapat menyelesaikan pendaftaran dalam waktu &lt; 3 menit.</td>
+    </tr>
+    <tr>
+      <td class="center"><strong>KNF-02</strong></td>
+      <td><em>Performance</em> (Kinerja)</td>
+      <td>Seluruh pemrosesan logika bisnis, validasi duplikasi rombel, dan kalkulasi tarif di dalam memori (<em>in-memory</em>) merespons dalam waktu &lt; 1 detik.</td>
+    </tr>
+    <tr>
+      <td class="center"><strong>KNF-03</strong></td>
+      <td><em>Security &amp; Access Control</em></td>
+      <td>Akses menu kelola lomba, verifikasi kas, dan rekapitulasi dibatasi secara ketat hanya dapat diakses oleh Panitia yang diautentikasi dengan benar.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>6. Aktor &amp; Use Case</h4>
+<p><strong>6.1 Tabel Pemetaan Aktor dan Tujuan:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Aktor</th>
+      <th style="width: 30%;">Peran &amp; Deskripsi</th>
+      <th style="width: 30%;">Tujuan Utama (Goal)</th>
+      <th style="width: 20%;">Use Case Terkait</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Perwakilan Rombel</strong></td>
+      <td>Mahasiswa perwakilan rombel yang mendaftarkan timnya pada ISL 2026.</td>
+      <td>Melihat lomba &amp; kuota, mendaftarkan tim, memilih pembayaran, dan memantau status pendaftaran.</td>
+      <td>UC-01, UC-02, UC-03, UC-04</td>
+    </tr>
+    <tr>
+      <td><strong>Panitia (Admin)</strong></td>
+      <td>Panitia divisi pendaftaran dan kesekretariatan ISL 2026.</td>
+      <td>Mengelola kuota lomba, memvalidasi bukti bayar, dan mencetak laporan rekapitulasi.</td>
+      <td>UC-01, UC-05, UC-06, UC-07</td>
+    </tr>
+    <tr>
+      <td><strong>Sistem</strong></td>
+      <td>Logika internal aplikasi Java PBO.</td>
+      <td>Memvalidasi keunikan rombel dan menghitung tarif secara polimorfik.</td>
+      <td>UC-08, UC-09</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="placeholder-box">
+  <span class="badge-orange">TUGAS ANGGOTA TIM: DIAGRAM USE CASE</span>
+  <p style="margin: 4px 0 8px 0; font-weight: bold; color: #9c4221;">[Nanti teman-teman kerjakan yang ini: Gambar Diagram Use Case]</p>
+  <p style="margin: 0; font-size: 9.5pt; color: #4a5568;">
+    Silakan buat diagram use case visual (bisa menggunakan draw.io / StarUML) berdasarkan aktor (<em>Perwakilan Rombel</em>, <em>Panitia</em>) dan 9 use case di atas, lalu tempelkan gambar ekspor PNG-nya di kotak ini.
+  </p>
+</div>
+
+<h4>7. Objek &amp; Kelas</h4>
+<p><strong>Tabel Seleksi Kandidat Kelas:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 6%;" class="center">No</th>
+      <th style="width: 22%;">Kandidat Kelas</th>
+      <th style="width: 20%;">Jenis PBO</th>
+      <th style="width: 14%;" class="center">Status</th>
+      <th style="width: 38%;">Alasan Pemilihan &amp; Konsep PBO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="center">1</td>
+      <td><strong>Pengguna</strong></td>
+      <td><em>Abstract Class</em></td>
+      <td class="center"><strong>Dipilih</strong></td>
+      <td>Superclass pewarisan atribut <code>id</code>, <code>nama</code>, <code>username</code>, <code>password</code>, dan method <code>login()</code>.</td>
+    </tr>
+    <tr>
+      <td class="center">2</td>
+      <td><strong>PerwakilanRombel</strong></td>
+      <td><em>Concrete Class</em></td>
+      <td class="center"><strong>Dipilih</strong></td>
+      <td>Turunan dari <code>Pengguna</code> yang menyimpan identitas rombel dan inisialisasi transaksi pendaftaran.</td>
+    </tr>
+    <tr>
+      <td class="center">3</td>
+      <td><strong>Panitia</strong></td>
+      <td><em>Concrete Class</em></td>
+      <td class="center"><strong>Dipilih</strong></td>
+      <td>Turunan dari <code>Pengguna</code> yang memiliki wewenang verifikasi pembayaran dan pembaruan kuota lomba.</td>
+    </tr>
+    <tr>
+      <td class="center">4</td>
+      <td><strong>CabangLomba</strong></td>
+      <td><em>Abstract Class</em></td>
+      <td class="center"><strong>Dipilih</strong></td>
+      <td>Superclass abstraksi master lomba dengan method abstrak polimorfik <code>hitungBiaya()</code>.</td>
+    </tr>
+    <tr>
+      <td class="center">5</td>
+      <td><strong>LombaSatuan</strong></td>
+      <td><em>Concrete Class</em></td>
+      <td class="center"><strong>Dipilih</strong></td>
+      <td>Turunan dari <code>CabangLomba</code> dengan kalkulasi tarif tunggal standar.</td>
+    </tr>
+    <tr>
+      <td class="center">6</td>
+      <td><strong>PaketBundling</strong></td>
+      <td><em>Concrete Class</em></td>
+      <td class="center"><strong>Dipilih</strong></td>
+      <td>Turunan dari <code>CabangLomba</code> dengan kalkulasi harga tetap promo bundling (Rp250.000).</td>
+    </tr>
+    <tr>
+      <td class="center">7</td>
+      <td><strong>Pembayaran</strong></td>
+      <td><em>Interface</em></td>
+      <td class="center"><strong>Dipilih</strong></td>
+      <td>Kontrak antarmuka pemrosesan pembayaran <code>prosesBayar()</code> dan <code>getStatusBukti()</code>.</td>
+    </tr>
+    <tr>
+      <td class="center">8</td>
+      <td><strong>BayarDana</strong></td>
+      <td><em>Concrete Class</em></td>
+      <td class="center"><strong>Dipilih</strong></td>
+      <td>Implementasi interface <code>Pembayaran</code> via dompet digital DANA.</td>
+    </tr>
+    <tr>
+      <td class="center">9</td>
+      <td><strong>BayarTunai</strong></td>
+      <td><em>Concrete Class</em></td>
+      <td class="center"><strong>Dipilih</strong></td>
+      <td>Implementasi interface <code>Pembayaran</code> via kas tunai ke panitia.</td>
+    </tr>
+    <tr>
+      <td class="center">10</td>
+      <td><strong>Pendaftaran</strong></td>
+      <td><em>Concrete Class</em></td>
+      <td class="center"><strong>Dipilih</strong></td>
+      <td>Pusat agregasi transaksi yang menghubungkan pendaftar, cabang lomba, dan pembayaran.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>8. Draf Class Diagram</h4>
+<div class="placeholder-box">
+  <span class="badge-orange">TUGAS ANGGOTA TIM: CLASS DIAGRAM</span>
+  <p style="margin: 4px 0 8px 0; font-weight: bold; color: #9c4221;">[Nanti teman-teman kerjakan yang ini: Gambar Class Diagram Visual]</p>
+  <p style="margin: 0 0 8px 0; font-size: 9.5pt; color: #4a5568;">
+    Silakan gambar Class Diagram visual (menggunakan draw.io / PlantUML / StarUML) sesuai relasi dan atribut kelas di bawah ini, lalu tempelkan hasil ekspor gambarnya di sini:
+  </p>
+  <ul style="margin: 0; font-size: 9.5pt; color: #4a5568;">
+    <li>Superclass <code>Pengguna</code> &rarr; Subclass <code>PerwakilanRombel</code> &amp; <code>Panitia</code> (Generalisasi / Pewarisan).</li>
+    <li>Superclass <code>CabangLomba</code> &rarr; Subclass <code>LombaSatuan</code> &amp; <code>PaketBundling</code> (Generalisasi &amp; Polimorfisme).</li>
+    <li>Interface <code>Pembayaran</code> &rarr; Implementasi <code>BayarDana</code> &amp; <code>BayarTunai</code> (Realisasi).</li>
+    <li>Kelas Transaksi <code>Pendaftaran</code> mengagregasi <code>PerwakilanRombel</code>, <code>CabangLomba</code>, dan <code>Pembayaran</code>.</li>
+  </ul>
+</div>
+<ul>
+  <li><strong>Pewarisan (Inheritance):</strong> <code>Pengguna</code> diturunkan ke <code>PerwakilanRombel</code> dan <code>Panitia</code>; <code>CabangLomba</code> diturunkan ke <code>LombaSatuan</code> dan <code>PaketBundling</code>.</li>
+  <li><strong>Realisasi Interface:</strong> <code>Pembayaran</code> diimplementasikan oleh <code>BayarDana</code> dan <code>BayarTunai</code>.</li>
+  <li><strong>Asosiasi &amp; Agregasi:</strong> <code>Pendaftaran</code> mengagregasi <code>PerwakilanRombel</code> (1..1), <code>CabangLomba</code> (1..*), dan <code>Pembayaran</code> (1..1).</li>
+</ul>
+
+<h4>9. Rencana Teknis</h4>
+<ul>
+  <li><strong>Bahasa:</strong> Java Standard Edition (JDK 25).</li>
+  <li><strong>IDE &amp; Antarmuka:</strong> IntelliJ IDEA dengan Command Line Interface (CLI).</li>
+  <li><strong>Penyimpanan:</strong> Java Collections Framework (In-Memory <code>ArrayList</code> dan <code>HashMap</code>).</li>
+  <li><strong>Repositori GitHub:</strong> <a href="https://github.com/McWooden/praktikum-object-oriented-programming.git">https://github.com/McWooden/praktikum-object-oriented-programming.git</a></li>
+</ul>
+
+<h4>10. Jadwal &amp; Peran (Gantt Chart Semester: Pertemuan 9 s.d. 15)</h4>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 5%;" class="center">No</th>
+      <th style="width: 35%;">Tahapan Kegiatan Proyek</th>
+      <th style="width: 25%;">Penanggung Jawab</th>
+      <th class="center">P9</th>
+      <th class="center">P10</th>
+      <th class="center">P11</th>
+      <th class="center">P12</th>
+      <th class="center">P13</th>
+      <th class="center">P14</th>
+      <th class="center">P15</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="center">1</td>
+      <td>Analisis Kebutuhan &amp; Penyusunan Proposal (LK 1)</td>
+      <td>M. Raka &amp; Fachri</td>
+      <td class="center"><strong>V</strong></td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+    </tr>
+    <tr>
+      <td class="center">2</td>
+      <td>Perancangan OOP &amp; Pemodelan Diagram</td>
+      <td>Sholahuddin &amp; Zuhdan</td>
+      <td class="center">-</td>
+      <td class="center"><strong>V</strong></td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+    </tr>
+    <tr>
+      <td class="center">3</td>
+      <td>Implementasi Core Class Model PBO</td>
+      <td>Sholahuddin Ahmad</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center"><strong>V</strong></td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+    </tr>
+    <tr>
+      <td class="center">4</td>
+      <td>Pengodean Logika Bisnis &amp; Menu CLI Konsol</td>
+      <td>Sholahuddin &amp; Zuhdan</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center"><strong>V</strong></td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+    </tr>
+    <tr>
+      <td class="center">5</td>
+      <td>Pengujian Sistem (Testing) &amp; Debugging</td>
+      <td>Ahmad Zuhdan Sani</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center"><strong>V</strong></td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+    </tr>
+    <tr>
+      <td class="center">6</td>
+      <td>Finalisasi Dokumentasi &amp; Repositori GitHub</td>
+      <td>Fachri &amp; M. Raka</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center"><strong>V</strong></td>
+      <td class="center">-</td>
+    </tr>
+    <tr>
+      <td class="center">7</td>
+      <td>Presentasi &amp; Demo Proyek Akhir (UAS)</td>
+      <td>Seluruh Tim</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center">-</td>
+      <td class="center"><strong>V</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>LAMPIRAN-LAMPIRAN</h3>
+
+<h4>LAMPIRAN 1: TEAM CHARTER &amp; LEMBAR KOMITMEN BERSAMA</h4>
+<ol>
+  <li><strong>Nilai Bersama:</strong> Mengembangkan aplikasi ISL 2026 secara bertanggung jawab, tepat waktu, dan menjunjung tinggi integritas akademik tanpa plagiasi kode.</li>
+  <li><strong>Aturan Komunikasi:</strong> Koordinasi via WhatsApp &amp; Discord. Rapat rutin setiap hari Selasa setelah sesi praktikum PBO.</li>
+  <li><strong>Resolusi Konflik:</strong> Musyawarah kekeluargaan dengan Project Advisor (Muhammad Raka Mushaddaq) sebagai mediator keputusan akhir.</li>
+</ol>
+
+<p><strong>Pernyataan Komitmen Anggota Tim:</strong></p>
+<p>Seluruh anggota tim (Muhammad Raka Mushaddaq, Sholahuddin Ahmad, Fachri Azizul Akbar, dan Ahmad Zuhdan Sani) menyatakan telah menyetujui seluruh ketentuan dalam Team Charter ini dan berkomitmen penuh untuk berkontribusi aktif sesuai peran serta tanggung jawab masing-masing.</p>
+
+<h4>LAMPIRAN 2: NOTULEN RAPAT KOORDINASI TIM</h4>
+<p><strong>Rapat 01: Kick-Off Proyek &amp; Perumusan Ide Proposal</strong></p>
+<ul>
+  <li><strong>Hari / Tanggal:</strong> Selasa, 10 November 2026</li>
+  <li><strong>Waktu:</strong> 15.30 – 17.00 WIB</li>
+  <li><strong>Tempat:</strong> Ruang Diskusi GKT / Discord</li>
+  <li><strong>Agenda:</strong> Pembagian peran tim, penetapan topik ISL 2026, analisis masalah Google Form, penyusunan draf awal proposal.</li>
+  <li><strong>Poin Keputusan:</strong>
+    <ol>
+      <li>Topik disepakati mengangkat sistem pendaftaran ISL 2026 berbasis Java CLI.</li>
+      <li>Penyimpanan menggunakan In-Memory Collections untuk fokus mendalami konsep murni OOP.</li>
+      <li>Sholahuddin &amp; Zuhdan memimpin pemodelan class diagram dan kode, Fachri &amp; Raka memimpin dokumentasi proposal.</li>
+    </ol>
+  </li>
+  <li><strong>Daftar Kehadiran:</strong> Hadir lengkap (Muhammad Raka Mushaddaq, Sholahuddin Ahmad, Fachri Azizul Akbar, Ahmad Zuhdan Sani).</li>
+</ul>
+
+<h4>LAMPIRAN 3: SOURCE CODE CORE CLASS PBO (JAVA 25)</h4>
+
+<p><strong>1. Model Pengguna (Superclass Abstrak):</strong></p>
+<pre>package model.user;
+
+public abstract class Pengguna {
+    protected String id;
+    protected String nama;
+    protected String username;
+    protected String password;
+
+    public Pengguna(String id, String nama, String username, String password) {
+        this.id = id;
+        this.nama = nama;
+        this.username = username;
+        this.password = password;
+    }
+
+    public boolean login(String username, String password) {
+        return this.username.equals(username) && this.password.equals(password);
+    }
+
+    public abstract String getProfil();
+
+    public String getId() { return id; }
+    public String getNama() { return nama; }
+    public String getUsername() { return username; }
+}</pre>
+
+<p><strong>2. Model Perwakilan Rombel (Subclass):</strong></p>
+<pre>package model.user;
+
+public class PerwakilanRombel extends Pengguna {
+    private String namaRombel;
+    private String programStudi;
+    private String nomorKontak;
+
+    public PerwakilanRombel(String id, String nama, String username, String password,
+                             String namaRombel, String programStudi, String nomorKontak) {
+        super(id, nama, username, password);
+        this.namaRombel = namaRombel;
+        this.programStudi = programStudi;
+        this.nomorKontak = nomorKontak;
+    }
+
+    @Override
+    public String getProfil() {
+        return "Perwakilan Rombel: " + namaRombel + " (" + nama + " | " + programStudi + " | HP: " + nomorKontak + ")";
+    }
+
+    public String getNamaRombel() { return namaRombel; }
+    public String getProgramStudi() { return programStudi; }
+    public String getNomorKontak() { return nomorKontak; }
+}</pre>
+
+<p><strong>3. Model Cabang Lomba (Superclass Abstrak):</strong></p>
+<pre>package model.lomba;
+
+public abstract class CabangLomba {
+    protected String kodeLomba;
+    protected String namaLomba;
+    protected int kuota;
+    protected int terdaftar;
+
+    public CabangLomba(String kodeLomba, String namaLomba, int kuota) {
+        this.kodeLomba = kodeLomba;
+        this.namaLomba = namaLomba;
+        this.kuota = kuota;
+        this.terdaftar = 0;
+    }
+
+    public abstract double hitungBiaya();
+
+    public boolean kurangiKuota() {
+        if (terdaftar &lt; kuota) {
+            terdaftar++;
+            return true;
+        }
+        return false;
+    }
+
+    public int getSisaKuota() { return kuota - terdaftar; }
+    public String getKodeLomba() { return kodeLomba; }
+    public String getNamaLomba() { return namaLomba; }
+    public int getKuota() { return kuota; }
+    public void setKuota(int kuota) { this.kuota = kuota; }
+    public int getTerdaftar() { return terdaftar; }
+}</pre>
+
+<p><strong>4. Model Lomba Satuan &amp; Paket Bundling (Polimorfisme Biaya):</strong></p>
+<pre>package model.lomba;
+
+public class LombaSatuan extends CabangLomba {
+    private double tarifDasar;
+
+    public LombaSatuan(String kodeLomba, String namaLomba, int kuota, double tarifDasar) {
+        super(kodeLomba, namaLomba, kuota);
+        this.tarifDasar = tarifDasar;
+    }
+
+    @Override
+    public double hitungBiaya() { return tarifDasar; }
+    public double getTarifDasar() { return tarifDasar; }
+}
+
+// Paket Bundling
+package model.lomba;
+
+import java.util.List;
+
+public class PaketBundling extends CabangLomba {
+    private double tarifPaket;
+    private List&lt;String&gt; daftarLombaTermasuk;
+
+    public PaketBundling(String kodeLomba, String namaLomba, int kuota, double tarifPaket, List&lt;String&gt; daftarLombaTermasuk) {
+        super(kodeLomba, namaLomba, kuota);
+        this.tarifPaket = tarifPaket;
+        this.daftarLombaTermasuk = daftarLombaTermasuk;
+    }
+
+    @Override
+    public double hitungBiaya() { return tarifPaket; }
+    public double getTarifPaket() { return tarifPaket; }
+    public List&lt;String&gt; getDaftarLombaTermasuk() { return daftarLombaTermasuk; }
+}</pre>
+
+<p><strong>5. Interface Pembayaran &amp; Implementasi (DANA &amp; Tunai):</strong></p>
+<pre>package payment;
+
+public interface Pembayaran {
+    boolean prosesBayar(double nominal);
+    String getStatusBukti();
+    String getMetode();
+}
+
+// Implementasi DANA
+package payment;
+
+public class BayarDana implements Pembayaran {
+    private String nomorHpDana;
+    private String noTransaksi;
+
+    public BayarDana(String nomorHpDana, String noTransaksi) {
+        this.nomorHpDana = nomorHpDana;
+        this.noTransaksi = noTransaksi;
+    }
+
+    @Override
+    public boolean prosesBayar(double nominal) {
+        return noTransaksi != null && !noTransaksi.isBlank() && nominal &gt; 0;
+    }
+
+    @Override
+    public String getStatusBukti() {
+        return "DANA (Nomor: " + nomorHpDana + " | Ref: " + noTransaksi + ")";
+    }
+
+    @Override
+    public String getMetode() { return "Transfer DANA"; }
+}
+
+// Implementasi Tunai Panitia
+package payment;
+
+public class BayarTunai implements Pembayaran {
+    private String namaPanitiaPenerima;
+    private String noKuitansi;
+
+    public BayarTunai(String namaPanitiaPenerima, String noKuitansi) {
+        this.namaPanitiaPenerima = namaPanitiaPenerima;
+        this.noKuitansi = noKuitansi;
+    }
+
+    @Override
+    public boolean prosesBayar(double nominal) {
+        return noKuitansi != null && !noKuitansi.isBlank() && nominal &gt; 0;
+    }
+
+    @Override
+    public String getStatusBukti() {
+        return "Tunai Panitia: " + namaPanitiaPenerima + " (Kuitansi: " + noKuitansi + ")";
+    }
+
+    @Override
+    public String getMetode() { return "Tunai / Cash"; }
+}</pre>
+
+<p><strong>6. Transaksi Pendaftaran (Agregasi Peserta, Lomba, dan Pembayaran):</strong></p>
+<pre>package model.transaksi;
+
+import model.lomba.CabangLomba;
+import model.user.PerwakilanRombel;
+import payment.Pembayaran;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pendaftaran {
+    private String idPendaftaran;
+    private LocalDate tanggal;
+    private String statusVerifikasi; // MENUNGGU_VERIFIKASI, LUNAS, DITOLAK
+    private double totalBiaya;
+    private PerwakilanRombel pendaftar;
+    private List&lt;CabangLomba&gt; daftarLomba;
+    private Pembayaran metodeBayar;
+
+    public Pendaftaran(String idPendaftaran, PerwakilanRombel pendaftar) {
+        this.idPendaftaran = idPendaftaran;
+        this.tanggal = LocalDate.now();
+        this.statusVerifikasi = "MENUNGGU_VERIFIKASI";
+        this.pendaftar = pendaftar;
+        this.daftarLomba = new ArrayList&lt;&gt;();
+        this.totalBiaya = 0.0;
+    }
+
+    public void tambahLomba(CabangLomba lomba) {
+        this.daftarLomba.add(lomba);
+        kalkulasiTotal();
+    }
+
+    public double kalkulasiTotal() {
+        this.totalBiaya = 0.0;
+        for (CabangLomba lomba : daftarLomba) {
+            this.totalBiaya += lomba.hitungBiaya();
+        }
+        return this.totalBiaya;
+    }
+
+    public void setMetodePembayaran(Pembayaran metodeBayar) {
+        this.metodeBayar = metodeBayar;
+    }
+
+    public void konfirmasiLunas() {
+        this.statusVerifikasi = "LUNAS";
+        for (CabangLomba lomba : daftarLomba) {
+            lomba.kurangiKuota();
+        }
+    }
+
+    public void tolakPendaftaran() {
+        this.statusVerifikasi = "DITOLAK";
+    }
+
+    public String getIdPendaftaran() { return idPendaftaran; }
+    public String getStatusVerifikasi() { return statusVerifikasi; }
+    public double getTotalBiaya() { return totalBiaya; }
+    public PerwakilanRombel getPendaftar() { return pendaftar; }
+    public List&lt;CabangLomba&gt; getDaftarLomba() { return daftarLomba; }
+    public Pembayaran getMetodeBayar() { return metodeBayar; }
+}</pre>
+
+<p><strong>7. Kelas Utama Eksekusi CLI Konsol:</strong></p>
+<pre>// Dijalankan melalui kelas Main.java di root direktori src/
+// Mengimplementasikan alur otentikasi multi-aktor, pemilihan cabang lomba,
+// validasi keunikan rombel secara otomatis, serta panel admin panitia.</pre>
+
+</body>
+</html>
